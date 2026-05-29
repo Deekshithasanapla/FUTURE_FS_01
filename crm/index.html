@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LeadFlow CRM</title>
+
+  <!-- CSS -->
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- FONT AWESOME -->
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+
+<body>
+
+  <div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+      <h2>
+
+        <i class="fa-solid fa-chart-line"></i>
+
+        LeadFlow
+
+      </h2>
+
+      <ul>
+
+        <li onclick="showSection('dashboardSection')">
+
+          <i class="fa-solid fa-house"></i>
+
+          Dashboard
+
+        </li>
+
+
+        <li onclick="showSection('leadsSection')">
+
+          <i class="fa-solid fa-users"></i>
+
+          Leads
+
+        </li>
+
+
+        <li onclick="showSection('analyticsSection')">
+
+          <i class="fa-solid fa-chart-simple"></i>
+
+          Analytics
+
+        </li>
+
+      </ul>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+      <!-- DASHBOARD SECTION -->
+
+      <section id="dashboardSection">
+
+        <div class="topbar">
+
+          <h1>Client Lead Management</h1>
+
+        </div>
+
+
+        <!-- STATS -->
+
+        <div class="stats-grid">
+
+          <!-- TOTAL LEADS -->
+
+          <div class="stat-card">
+
+            <div>
+
+              <h3>Total Leads</h3>
+
+              <p id="totalLeads">0</p>
+
+            </div>
+
+            <i class="fa-solid fa-users"></i>
+
+          </div>
+
+
+          <!-- NEW LEADS -->
+
+          <div class="stat-card">
+
+            <div>
+
+              <h3>New Leads</h3>
+
+              <p id="newLeads">0</p>
+
+            </div>
+
+            <i class="fa-solid fa-user-plus"></i>
+
+          </div>
+
+
+          <!-- CONTACTED -->
+
+          <div class="stat-card">
+
+            <div>
+
+              <h3>Contacted</h3>
+
+              <p id="contactedLeads">0</p>
+
+            </div>
+
+            <i class="fa-solid fa-phone"></i>
+
+          </div>
+
+
+          <!-- CONVERTED -->
+
+          <div class="stat-card">
+
+            <div>
+
+              <h3>Converted</h3>
+
+              <p id="convertedLeads">0</p>
+
+            </div>
+
+            <i class="fa-solid fa-circle-check"></i>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- LEADS SECTION -->
+
+      <section id="leadsSection" style="display:none;">
+
+        <!-- FORM -->
+
+        <div class="form-container">
+
+          <h2>Add New Lead</h2>
+
+          <form id="leadForm">
+
+            <input
+              type="text"
+              id="name"
+              placeholder="Enter client name"
+              required
+            >
+
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter email address"
+              required
+            >
+
+            <input
+              type="text"
+              id="phone"
+              placeholder="Enter phone number"
+            >
+
+            <input
+              type="text"
+              id="company"
+              placeholder="Enter company name"
+            >
+
+            <textarea
+              id="message"
+              placeholder="Enter lead message"
+            ></textarea>
+
+            <button type="submit">
+
+              <i class="fa-solid fa-plus"></i>
+
+              Add Lead
+
+            </button>
+
+          </form>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-bar">
+
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <input
+            type="text"
+            id="search"
+            placeholder="Search leads..."
+          >
+
+        </div>
+
+
+        <!-- LEADS CONTAINER -->
+
+        <div id="leadsContainer"></div>
+
+      </section>
+
+
+      <!-- ANALYTICS SECTION -->
+
+      <section id="analyticsSection" style="display:none;">
+
+        <div class="form-container">
+
+          <h2>
+
+            <i class="fa-solid fa-chart-pie"></i>
+
+            CRM Analytics
+
+          </h2>
+
+          <p>
+
+            Monitor client leads, conversions, and engagement metrics
+            professionally using your CRM dashboard.
+
+          </p>
+
+        </div>
+
+      </section>
+
+
+      <!-- FOOTER -->
+
+      <footer class="footer">
+
+        <!-- LEFT -->
+
+        <div class="footer-left">
+
+          <h3>
+
+            <i class="fa-solid fa-chart-line"></i>
+
+            LeadFlow CRM
+
+          </h3>
+
+          <p>
+
+            Professional Client Lead Management System
+
+          </p>
+
+        </div>
+
+
+        <!-- CENTER -->
+
+        <div class="footer-center">
+
+          <a href="#">Dashboard</a>
+
+          <a href="#">Leads</a>
+
+          <a href="#">Analytics</a>
+
+          <a href="#">Support</a>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="footer-right">
+
+          <!-- GITHUB -->
+
+          <a
+            href="https://github.com/Deekshithasanapla"
+            target="_blank"
+          >
+
+            <i class="fa-brands fa-github"></i>
+
+          </a>
+
+
+          <!-- LINKEDIN -->
+
+          <a
+            href="https://www.linkedin.com/in/deekshitha-sanapala-a4a9763a7"
+            target="_blank"
+          >
+
+            <i class="fa-brands fa-linkedin"></i>
+
+          </a>
+
+        </div>
+
+      </footer>
+
+    </main>
+
+  </div>
+
+  <!-- JAVASCRIPT -->
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
